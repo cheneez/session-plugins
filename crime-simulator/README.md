@@ -16,7 +16,17 @@ The same plugin cuts motion sickness: field of view, no walk bob, no screen shak
 
 Cash stays with the player who picks it up. X drops one bill onto the ground, chosen from denominations the player can afford. Job maps spawn a set of street bills each day. Police drop first aid, stun darts, an armor vest, or a $20, $50, or $100 bill.
 
-The same plugin is the shop: skill books, gear, experience packs, and the upgrade rows (run speed, jump, bag size, health, stamina, field repair, highlight, damage immunity, heal, stealth). Death removes one level from run speed, jump, health, and stamina. A paid revive, a 10-second group timer when everyone is down, home selling, and paid item repair are in this plugin too.
+The same plugin is the shop: skill books, gear, experience packs, and passive upgrades for run speed, jump, bag size, health, and stamina. Death removes one level from run speed, jump, health, and stamina. Home items can be sold into the shared balance.
+
+Five active skills sit in that shop, each ranked I, II, and III. Only one is equipped. Z uses it. Higher ranks shorten the cooldown, and III adds an extra effect.
+
+- Field repair. Hold Z for 3 seconds and pay cash to fix the held item. Cooldown 30 / 15 / 5 seconds. Rank III halves the cost.
+- Highlight. Outlines people through walls within 30 meters. Rank I is 5 seconds (60 second cooldown). Rank II is 10 seconds (45). Rank III is 10 seconds (30) and also outlines loot and safes.
+- Damage immunity. Health is locked. Rank I is 10 seconds (180 second cooldown). Rank II is 15 seconds (120). Rank III is 20 seconds (60), plus 20% move speed, 50% jump, and no stamina drain.
+- Heal. Clears damage. Cooldown 60 / 45 / 30 seconds. Rank III revives a downed teammate on the interact key, with no first aid kit.
+- Stealth. The body fades and NPCs search the last known spot. Rank I is 15 seconds (180 second cooldown). Rank II is 20 seconds (120). Rank III is 30 seconds (60) and walks through doors.
+
+Revive is separate from the skill ranks: N spends $500 to get back up. If the whole group is down, they have 10 seconds before the night ends.
 
 ## More police
 

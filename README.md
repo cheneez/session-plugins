@@ -29,9 +29,18 @@ Upgrades bought with cash:
 
 - Run speed, jump height, health, and stamina, up to 10
 - Bag capacity, up to 7
-- Field repair, highlight, damage immunity, heal, and stealth, up to 3
 
-Dying drops run speed, jump, health, and stamina by one level. Stealth at the top rank lets the player walk through doors while NPCs stay blocked. A downed player can pay cash to revive. If everyone is down, the group has 10 seconds before the night ends. Home items can be sold into the shared balance. A broken held item can be repaired for cash.
+**Abilities I, II, and III.** Five skills are bought in the same shop. Each one ranks I, then II, then III. Only one is equipped at a time. Press Z to use it. A higher rank shortens the cooldown, and rank III adds an extra effect.
+
+- **Field repair.** Hold Z for 3 seconds to fix the item in hand, paid in cash. Cooldown is 30 seconds at I, 15 at II, and 5 at III. Rank III also cuts that repair cost in half.
+- **Highlight.** Outlines people through walls within 30 meters. Rank I lasts 5 seconds with a 60 second cooldown. Rank II lasts 10 seconds with a 45 second cooldown. Rank III lasts 10 seconds, cooldown 30, and also outlines loot and safes.
+- **Damage immunity.** Health cannot drop while it is on. Rank I lasts 10 seconds (180 second cooldown). Rank II lasts 15 seconds (120). Rank III lasts 20 seconds (60) and also adds 20% move speed, 50% jump height, and no stamina drain.
+- **Heal.** Clears the player’s damage at once. Cooldown is 60 seconds at I, 45 at II, and 30 at III. Rank III can also revive a downed teammate by holding the interact key, with no first aid kit.
+- **Stealth.** The body fades, and NPCs lose sight and search the last place they saw the player. Rank I lasts 15 seconds (180 second cooldown). Rank II lasts 20 seconds (120). Rank III lasts 30 seconds (60) and lets the player walk through doors while NPCs stay blocked.
+
+**Revive.** A downed player presses N to come back for $500. Heal III is the other way to bring a teammate up. If everyone is down, the group has 10 seconds before the night ends.
+
+Dying drops run speed, jump, health, and stamina by one level. Home items can be sold into the shared balance.
 
 **Store.** Computer-store stock refills when the day advances, and the furniture purchase cap is raised to 10.
 
