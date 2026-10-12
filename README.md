@@ -10,7 +10,7 @@ A set of plugins for this co-op Unity game. They add a third-person camera, play
 
 **Camera comfort.** Optional field of view, no walk bob, no damage shake, no sprint or jump field-of-view kick, scaled hand sway, and no motion blur or lens distortion. Aim zoom is left alone.
 
-**Cash and item drops.** Cash picked up stays on that player. Press X to drop one bill, no larger than the current balance, onto a surface in front of the player. Job maps also scatter street bills for the day. Defeated police drop first aid, stun darts, an armor vest, or a cash bill.
+**Cash and item drops.** Cash picked up stays on that player. Press Ctrl to drop one bill, no larger than the current balance, onto a surface in front of the player. Job maps also scatter street bills for the day. Defeated police drop first aid, stun darts, an armor vest, or a cash bill.
 
 **More police.** A chase rolls each officer into one of four types, and higher wanted stars bring more of the special types:
 

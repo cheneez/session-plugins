@@ -14,7 +14,7 @@ The same plugin cuts motion sickness: field of view, no walk bob, no screen shak
 
 `skill-shop` — `com.kaboo.crimesim.skillcash`.
 
-Cash stays with the player who picks it up. X drops one bill onto the ground, chosen from denominations the player can afford. Job maps spawn a set of street bills each day. Police drop first aid, stun darts, an armor vest, or a $20, $50, or $100 bill.
+Cash stays with the player who picks it up. Ctrl drops one bill onto the ground, chosen from denominations the player can afford. Job maps spawn a set of street bills each day. Police drop first aid, stun darts, an armor vest, or a $20, $50, or $100 bill.
 
 The same plugin is the shop: skill books, gear, experience packs, and passive upgrades for run speed, jump, bag size, health, and stamina. Death removes one level from run speed, jump, health, and stamina. Home items can be sold into the shared balance.
 
