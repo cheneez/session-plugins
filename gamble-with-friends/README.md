@@ -1,26 +1,31 @@
-# Gamble With Your Friends plugins
+# Gamble With Your Friends
 
-BepInEx 5 plugins for the Unity (Mono) build. Networking in this game is Mirror. Lobby changes are applied by the host, so other players do not need the same files installed to join.
+BepInEx plugins for the Unity (Mono) build. Networking is Mirror. The host applies lobby and class rules, so other players can join without installing the files.
+
+## Four classes
+
+`SoloBank.cs` — `com.local.solobank`.
+
+Each player picks one class at the start. Thieves are limited to two. The keys are 1, 2, 3, and 4.
+
+**Casino boss.** Starts with $10,000 and 20 tickets and has no quota. Shop gold-ticket prices are permanently halved and do not rise. Machines the boss bought pay the boss a cut when someone else uses them, and a share of other players’ losses is paid to the boss. The boss can tip or loan cash that has to be repaid. Goal: stake a minimum and earn a set multiplier.
+
+**Gambler.** Upgrades do not reset and can stack. A daily basketball shot can double the bonus or the quota. Once a day the gambler marks one player for a duel, and the winner takes the loser’s cash. Goal: win a set amount.
+
+**Thief.** Steals cash from players or NPCs, can disguise as a player or an NPC, and moves faster. Stealing has a cooldown. Goal: steal a rising percent of other people’s cash.
+
+**Security.** Starts with $500 and 5 tickets and is on the boss’s side. The bat and pistol cost nothing, and raising the bat is 15% faster. Holding a thief for 2 seconds catches them and raises the guard’s pay. If the boss is robbed, the guard is not paid the next day. Goal: protect the boss for three days, then five, then ten in a row.
+
+The same plugin draws the ranking panel, host loans (F9), and bet insurance.
 
 ## Larger lobbies
 
-`MorePlayers.cs` — plugin id `com.local.moreplayers`.
+`MorePlayers.cs` — `com.local.moreplayers`.
 
-Adds a config value, `MaxPlayers`, from 2 to 32. The default is 16. Only the host has to run it. On load, and again at start, the plugin writes that cap into the lobby.
+`MaxPlayers` is a config value from 2 to 32. The default is 16. Only the host needs it.
 
-## Solo bank
+## Day timer
 
-`SoloBank.cs` — plugin id `com.local.solobank`.
+`DayDebug.cs` — `com.local.solodaydebug`.
 
-A host session layer on top of the normal tables:
-
-- A ranking panel in the top-right.
-- Host loans, opened with F9.
-- Bet insurance, including how much of the cover was actually used.
-- Duel pairing and a short immunity window, with a log line for the stake, multiplier, and balance before and after.
-
-## Day debug
-
-`DayDebug.cs` — plugin id `com.local.solodaydebug`.
-
-A small movable window that shows the current day timer so the host can see whether the round clock matches the expected length.
+A small window that shows the current day timer.

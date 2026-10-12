@@ -1,44 +1,43 @@
-# Crime Simulator plugins
+# Crime Simulator
 
-BepInEx 5 plugins for the Unity (Mono) build. Each folder is one plugin. They share the `com.kaboo.crimesim` id prefix and, where noted, load after the skill shop.
+BepInEx plugins for the Unity (Mono) build. They add third person, cash item drops, extra police types, a carry bag, and a skill shop.
 
-## Comfort camera
+## Third person
 
-`comfort-camera` — plugin id `com.kaboo.crimesim.antisickness`.
+`comfort-camera` — `com.kaboo.crimesim.antisickness`.
 
-Reduces camera sickness and adds an optional third-person view for the local player only.
+O switches first and third person for the local player. The camera sits behind the eyes, from 1 to 6 meters, and stops at walls. Aiming still uses the eye position, so the crosshair matches the shot. The local body fades inside 2 meters. Other players see a solid character. The view returns to first person while dead or in a minigame.
 
-- Field of view override, or leave the game’s own setting.
-- Turns off walk bob, damage shake, sprint and jump field-of-view kicks, motion blur, and chromatic aberration. Aim zoom is left alone.
-- Hand sway is a 0 to 1 scale.
-- O toggles first and third person. Hold minus or equals to change camera distance from 1 to 6 meters. When the camera is close, the local body fades so it does not fill the lens. Other players still see a normal character.
+The same plugin cuts motion sickness: field of view, no walk bob, no screen shake, no sprint or jump field-of-view kick, scaled hand sway, no motion blur, and no lens distortion.
+
+## Cash and item drops
+
+`skill-shop` — `com.kaboo.crimesim.skillcash`.
+
+Cash stays with the player who picks it up. X drops one bill onto the ground, chosen from denominations the player can afford. Job maps spawn a set of street bills each day. Police drop first aid, stun darts, an armor vest, or a $20, $50, or $100 bill.
+
+The same plugin is the shop: skill books, gear, experience packs, and the upgrade rows (run speed, jump, bag size, health, stamina, field repair, highlight, damage immunity, heal, stealth). Death removes one level from run speed, jump, health, and stamina. A paid revive, a 10-second group timer when everyone is down, home selling, and paid item repair are in this plugin too.
+
+## More police
+
+`bounty-board` — `com.kaboo.crimesim.bounty`.
+
+Each officer is standard, fast (1.5 times speed), tank (5 times health), or tracker (keeps the player in sight). Higher wanted stars roll the special types more often. After four arrivals with no tracker, the next officer is a tracker. The bounty total is on the HUD, and police who catch the player take it plus a fine.
 
 ## Carry bag
 
-`carry-bag` — plugin id `com.kaboo.crimesim.duffelbag`. Requires the skill shop plugin.
+`carry-bag` — `com.kaboo.crimesim.duffelbag`. Requires the skill shop.
 
-Adds a duffel that holds loot outside the normal hands. Capacity starts at 3 and can grow to 10. Items keep an icon, the bag tracks the world save, and a quota label shows what is stored.
+Sellable loot goes into the bag first. Capacity starts at 3 and the shop can raise it to 10. G drops the newest item.
 
-## Skill shop
+## Store
 
-`skill-shop` — plugin id `com.kaboo.crimesim.skillcash`.
+`store-restock` — `com.kaboo.crimesim.shop`. Requires the skill shop.
 
-Sells the game’s skill books and a short gear list for cash, using the game’s own item ids. Cash found in locked containers uses different bill weights for basic, advanced, and master locks, and for dial and electronic safes.
-
-## Store restock
-
-`store-restock` — plugin id `com.kaboo.crimesim.shop`. Requires the skill shop plugin.
-
-Refills computer-store stock when the world advances a day, and raises the furniture site purchase limit to 10.
-
-## Bounty board
-
-`bounty-board` — plugin id `com.kaboo.crimesim.bounty`.
-
-Tracks a bounty total for the session and shows it on the player HUD. Police encounters are tagged as standard, fast, tank, or tracker. Host and client stay aligned through short chat messages rather than a separate network object.
+Shop stock refills when the day advances. The furniture purchase cap is 10.
 
 ## Host session
 
-`host-session` — plugin id `com.kaboo.crimesim.hostbuffs`.
+`host-session` — `com.kaboo.crimesim.hostbuffs`.
 
-Host-only switches for jump height, move speed, and the world time scale. The plugin looks up the game’s movement and time fields at startup and logs a clear error if a game update renamed them.
+Host-only toggles: double jump, 1.5 times move speed, rewind the clock one hour, add $100, and outline NPCs within 30 meters.
